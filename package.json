@@ -1,0 +1,55 @@
+{
+  "name": "aniedi-clan-backend-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start-dev": "nodemon --exec babel-node src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-C-Aniedi-Clan/Aniedi-Clan-Backend-Nodejs.git"
+  },
+  "keywords": [
+    "hospital",
+    "doctor",
+    "nurse",
+    "patient",
+    "drugs",
+    "HMO",
+    "treatment"
+  ],
+  "author": "Aniedi-Clan-Backend-Nodejs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dev-C-Aniedi-Clan/Aniedi-Clan-Backend-Nodejs/issues"
+  },
+  "homepage": "https://github.com/Dev-C-Aniedi-Clan/Aniedi-Clan-Backend-Nodejs#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.7.4",
+    "@babel/runtime": "^7.7.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coveralls": "^3.0.7",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.2",
+    "nodemon": "^2.0.2",
+    "nyc": "^14.1.1"
+  }
+}
