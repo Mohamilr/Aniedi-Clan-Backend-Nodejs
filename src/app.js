@@ -2,6 +2,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
+import morgan from 'morgan';
 
 // intantiate express
 const app = express();
@@ -9,11 +10,13 @@ const app = express();
 // configure dotenv
 dotenv.config();
 
-// configure body parser
-app.use(bodyParser.json({extended : true}));
+// configure morgan
+app.use(morgan('dev'));
 
-// declare port
-const port = process.env.PORT || 4000;
+// configure body parser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended : false }));
+
 
 // welcome route
 app.get('/', (req, res) => {
@@ -23,12 +26,9 @@ app.get('/', (req, res) => {
 });
 
 app.use('*', (req, res) => {
-    res.status(200).json({
+    res.status(404).json({
         message: 'incorrect route'
     });
 });
 
-// app listens on declared port
-app.listen(port, () => {
-    console.log(`app is running on port ${port}`);
-})
+export default app;
