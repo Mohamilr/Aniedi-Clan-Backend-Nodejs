@@ -10,6 +10,7 @@ export default sequelize.define('Patient', {
     user_id: {
         type: Sequelize.INTEGER(11),
         allowNull: false,
+        unique: true
     },
     title: {
         type: Sequelize.STRING(50)
@@ -33,7 +34,8 @@ export default sequelize.define('Patient', {
     },
     email: {
         type: Sequelize.STRING(300),
-        defaultValue: null
+        defaultValue: null,
+        unique: true
     },
     password: {
         type: Sequelize.STRING(225)
@@ -48,10 +50,13 @@ export default sequelize.define('Patient', {
         type: Sequelize.STRING(225)
     },
     phone: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue: null,
+        unique: true
     },
     admission_date: {
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
+        allowNull: false
     },
     discharged_date: {
         type: Sequelize.DATE,
@@ -59,7 +64,8 @@ export default sequelize.define('Patient', {
     },
     hmo_card_no: {
         type: Sequelize.STRING(20),
-        defaultValue: null
+        defaultValue: null,
+        unique: true
     },
     purpose: {
         type: Sequelize.STRING(40)
@@ -74,7 +80,8 @@ export default sequelize.define('Patient', {
     },
     hmo_id: {
         type: Sequelize.INTEGER(11),
-        defaultValue: null
+        defaultValue: null,
+        unique: true
     },
     hmo_name: {
         type: Sequelize.STRING(225),

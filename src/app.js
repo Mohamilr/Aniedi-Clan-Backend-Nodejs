@@ -4,6 +4,10 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 
+// import routers
+import patientRoute from './route/patient_route/index.route';
+
+
 // intantiate express
 const app = express();
 
@@ -17,6 +21,8 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : false }));
 
+// app route paths
+app.use('/api/v1/', patientRoute);
 
 // welcome route
 app.get('/', (req, res) => {
@@ -25,6 +31,7 @@ app.get('/', (req, res) => {
     });
 });
 
+// catch all incorrect routes
 app.use('*', (req, res) => {
     res.status(404).json({
         message: 'incorrect route'

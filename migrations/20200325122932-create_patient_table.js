@@ -8,89 +8,96 @@ module.exports = {
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,
-      },
-      user_id: {
+    },
+    user_id: {
         type: Sequelize.INTEGER(11),
         allowNull: false,
-      },
-      title: {
+        unique: true
+    },
+    title: {
         type: Sequelize.STRING(50)
-      },
-      patient_fullname: {
+    },
+    patient_fullname: {
         type: Sequelize.STRING(50),
         allowNull: false
-      },
-      gender: {
+    },
+    gender: {
         type: Sequelize.STRING(50)
-      },
-      genotype: {
+    },
+    genotype: {
         type: Sequelize.STRING(50),
         defaultValue: null
-      },
-      marital_status: {
+    },
+    marital_status: {
         type: Sequelize.STRING(50)
-      },
-      birth_date: {
+    },
+    birth_date: {
         type: Sequelize.DATE
-      },
-      email: {
+    },
+    email: {
         type: Sequelize.STRING(300),
-        defaultValue: null
-      },
-      password: {
+        defaultValue: null,
+        unique: true
+    },
+    password: {
         type: Sequelize.STRING(225)
-      },
-      address: {
+    },
+    address: {
         type: Sequelize.STRING(300)
-      },
-      state: {
+    },
+    state: {
         type: Sequelize.STRING(225)
-      },
-      country: {
+    },
+    country: {
         type: Sequelize.STRING(225)
-      },
-      phone: {
-        type: Sequelize.INTEGER
-      },
-      admission_date: {
-        type: Sequelize.DATE
-      },
-      discharged_date: {
+    },
+    phone: {
+        type: Sequelize.INTEGER,
+        defaultValue: null,
+        unique: true
+    },
+    admission_date: {
+        type: Sequelize.DATE,
+        allowNull: false
+    },
+    discharged_date: {
         type: Sequelize.DATE,
         defaultValue: null
-      },
-      hmo_card_no: {
+    },
+    hmo_card_no: {
         type: Sequelize.STRING(20),
-        defaultValue: null
-      },
-      purpose: {
+        defaultValue: null,
+        unique: true
+    },
+    purpose: {
         type: Sequelize.STRING(40)
-      },
-      photo: {
+    },
+    photo: {
         type: Sequelize.STRING(1000),
         defaultValue: null
-      },
-      doctor_id: {
+    },
+    doctor_id: {
         type: Sequelize.INTEGER(11),
         defaultValue: null
-      },
-      hmo_id: {
+    },
+    hmo_id: {
         type: Sequelize.INTEGER(11),
-        defaultValue: null
-      },
-      hmo_name: {
+        defaultValue: null,
+        unique: true
+    },
+    hmo_name: {
         type: Sequelize.STRING(225),
         defaultValue: null
-      },
-      status: {
+    },
+    status: {
         type: Sequelize.STRING(20),
         defaultValue: null
-      },
-      time_in: {
+    },
+    time_in: {
         type: 'TIMESTAMP',
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
         allowNull: false
-      },
+    },
       createdAt: Sequelize.DATE,
       updatedAt: Sequelize.DATE
     })
