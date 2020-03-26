@@ -3,9 +3,10 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
+import fileUpload from 'express-fileupload';
 
 // import routers
-import patientRoute from './route/patient_route/index.route';
+import patientRoute from './route/patient_route/Index.route';
 
 
 // intantiate express
@@ -20,6 +21,11 @@ app.use(morgan('dev'));
 // configure body parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended : false }));
+
+// configure file-upload
+app.use(fileUpload({
+    useTempFiles: true
+}));
 
 // app route paths
 app.use('/api/v1/', patientRoute);

@@ -10,7 +10,6 @@ export default sequelize.define('Patient', {
     user_id: {
         type: Sequelize.INTEGER(11),
         allowNull: false,
-        unique: true
     },
     title: {
         type: Sequelize.STRING(50)
@@ -50,7 +49,7 @@ export default sequelize.define('Patient', {
         type: Sequelize.STRING(225)
     },
     phone: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
         defaultValue: null,
         unique: true
     },
@@ -81,7 +80,6 @@ export default sequelize.define('Patient', {
     hmo_id: {
         type: Sequelize.INTEGER(11),
         defaultValue: null,
-        unique: true
     },
     hmo_name: {
         type: Sequelize.STRING(225),
