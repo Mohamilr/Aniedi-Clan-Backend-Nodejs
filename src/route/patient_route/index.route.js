@@ -3,6 +3,6 @@ import router from './Signup.route';
 
 const patientRouter = Router();
 
-patientRouter.use('/post', router);
+patientRouter.use('/patient', router);
 
 export default patientRouter;
