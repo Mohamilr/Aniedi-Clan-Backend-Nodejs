@@ -6,7 +6,7 @@ import morgan from 'morgan';
 import fileUpload from 'express-fileupload';
 
 // import routers
-import patientRoute from './route/patient_route/index.route';
+import patientRoute from './route/patient_route/Index.route';
 
 
 // intantiate express
