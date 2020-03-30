@@ -83,24 +83,6 @@ const Signup = async (req, res) => {
             return jsonResponse(res, 'error', 400, 'patient already belong to this HMO');
         }
 
-        // else if (data === null) {
-        //             console.log()
-        //         }
-
-        // Patient.findOne({ where: { email: email, hmo_name: hmoName } })
-        // .then(data => {
-        //     // let ans = [data]
-        //     if (data == null) {
-        //        console.log('continue'); 
-        //     }
-        //     else if (data.email === email) {
-        //         return jsonResponse(res, 'error', 400, data);
-        //     }
-        // })
-        // .catch(e => console.log(e))
-    
-        
-
     }
     catch (e) {
         console.log(e)
