@@ -5,6 +5,6 @@ import signupMiddleware from '../../middleware/patient_middleware/Signup.middlew
 
 const router = Router();
 
-router.post('/patient', signupMiddleware.signup, signup);
+router.post('/signup', signupMiddleware.signup, signup);
 
 export default router;
