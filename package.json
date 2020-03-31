@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start-dev": "nodemon --exec babel-node src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-dev": "nodemon --exec babel-node ./server.js",
+    "test": "nyc mocha --require @babel/register --require @babel/polyfill src/test/patient",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -29,9 +30,14 @@
   "dependencies": {
     "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
+    "cloudinary": "^1.20.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "express-validator": "^6.4.0",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
@@ -44,12 +50,14 @@
     "@babel/runtime": "^7.7.2",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
-    "coveralls": "^3.0.7",
+    "coveralls": "^3.0.11",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "mocha": "^6.2.2",
+    "mocha": "^6.2.3",
+    "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
-    "nyc": "^14.1.1"
+    "nyc": "^15.0.0",
+    "sequelize-cli": "^5.5.1"
   }
 }
