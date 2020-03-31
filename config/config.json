@@ -8,10 +8,10 @@
     "operatorsAliases": false
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "write",
-    "host": "localhost",
+    "username": "U3D8coy6Yo",
+    "password": "vO0Vu7bo1h",
+    "database": "U3D8coy6Yo",
+    "host": "remotemysql.com",
     "dialect": "mysql",
     "operatorsAliases": false
   },
